@@ -6,10 +6,10 @@
 
 package be.vdab.servlets;
 
+import be.vdab.dao.PizzaDAO;
 import be.vdab.entities.Pizza;
 import be.vdab.util.RequestStatistiek;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.LinkedHashMap;
@@ -31,7 +31,7 @@ public class PizzaServlet extends HttpServlet {
 private static final long serialVersionUID = 1L;
 private static final String VIEW = "/WEB-INF/JSP/pizzas.jsp";
 private final RequestStatistiek requestStatistiek = new RequestStatistiek();
-
+private final PizzaDAO pizzaDAO = new PizzaDAO();
     
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
