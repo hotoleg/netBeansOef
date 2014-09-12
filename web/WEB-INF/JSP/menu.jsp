@@ -1,16 +1,22 @@
 <%@ page contentType="text/html" pageEncoding="UTF-8" session="false"%>
 <%@taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+
 <header>
-<img src="${pageContext.servletContext.contextPath}/images/pizzaluigilogo.png"
-alt="logo"/>
-<nav>
-<ul class="menu">
+    <img src="${pageContext.servletContext.contextPath}/images/pizzaluigilogo.png"alt="logo"/>
+<div class="wrapper">
+<div class="container"><ul class="menu" rel="sam1">
 <c:url value="/" var="rootURL"/>
-<li><a href="${rootURL}">Welkom</a></li>
+<li><a href="${rootURL}" class="m">Welkom</a></li>
 <c:url value="/pizzas" var="pizzasURL"/>
-<li><a href="${pizzasURL}">Pizza's</a></li>
+<li><a href="${pizzasURL}" class="m">Pizza's</a></li>
 <c:url value="/statistieken" var="statistiekURL"/>
-<li><a href="${statistiekURL}">Statistieken</a></li>
+<li><a href="${statistiekURL}" class="m">Statistieken</a></li>
+<c:url value="tussenprijzen" var="pizzasTussenPrijzenURL"/>
+<li><a href="${pizzasTussenPrijzenURL}" class="m">Pizza’s tussen prijzen</a></li>
+<c:url value="voorkeuren" var="voorkeurpizzasURL"/>
+<li><a href="${voorkeurpizzasURL}">Voorkeurpizza's</a></li>
 </ul>
-</nav>
+</div>
+</div>
 </header>
+

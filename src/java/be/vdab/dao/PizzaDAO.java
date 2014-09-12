@@ -28,5 +28,17 @@ public class PizzaDAO {
     public List<Pizza> findAll() { 
         return new ArrayList<Pizza>(pizzas.values());
     }
-    
+    public Pizza read(long nummer) {
+        return pizzas.get(nummer);
+    }
+    public List<Pizza> findByPrijs(BigDecimal van, BigDecimal tot) {
+        List<Pizza> resultaat = new ArrayList<Pizza>();
+        for (Pizza pizza : pizzas.values()) {
+            if (pizza.getPrijs().compareTo(van) >= 0
+                && pizza.getPrijs().compareTo(tot) <= 0) {
+                resultaat.add(pizza);
+            }
+        }
+        return resultaat;
+    }
 }

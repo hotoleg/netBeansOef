@@ -10,29 +10,21 @@
         <link rel="stylesheet" href="${contextPath}/styles/default.css"/>
     </head>
     <body>
-        <h1>Onze pizza's
-            
-        </h1> 
+        <h1>Onze pizza's</h1> 
         <c:forEach begin="1" end="${sterren}">
             <img src="${contextPath}/images/ster.png" alt="ster"/>
         </c:forEach>
         <ul>
-        <c:forEach var="pizza" items="${pizzas}"> 
-            <li><li>${pizza.naam} ${pizza.prijs}&euro;</li></li> 
-        </c:forEach> 
-        <li><br /><br /><br /></li>
-        <c:forEach var="entry" items="${pizzas1}" varStatus="status">
-            <li class="${status.count % 2 == 0 ? 'even' : 'oneven'}">
-                ${entry.key}: <c:out value="${entry.value.naam}"/> ${entry.value.prijs}&euro;
-                ${entry.value.pikant ? "pikant" : "niet pikant"}
-                <c:url value="/pizzas/detail" var="detailURL">
-                <c:param name="nummer" value="${entry.key}"/>
-                <c:param name="naam" value="${entry.value.naam}"/>
-                </c:url>
-                <a href="<c:out value='${detailURL}'/>">Detail</a>
-            </li>
+            <c:forEach var="pizza" items="${pizzas}" varStatus="status">
+        <li class="${status.count % 2 == 0 ? 'even':'oneven'}">${pizza.nummer}:
+        <c:out value="${pizza.naam}"/> ${pizza.prijs}&euro;
+        ${pizza.pikant ? "pikant" : "niet pikant"}
+        <c:url value="pizzadetail" var="detailURL">
+        <c:param name="nummer" value="${pizza.nummer}"/>
+        </c:url>
+        <a href="<c:out value='${detailURL}'/>">Detail</a>
+        </li>
         </c:forEach>
         </ul>
-            
     </body>
 </html>
