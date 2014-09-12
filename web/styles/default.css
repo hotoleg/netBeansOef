@@ -1,0 +1,51 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 9-sep-2014, 11:00:36
+    Author     : oleg.kolokolnikov
+*/
+
+h1 {
+    
+    color: black;
+    text-align: center;
+}
+img {
+    display: inline;
+}
+body {
+font-family: Verdana;
+}
+dd, dt {
+margin-left: 0px;
+background-color: lightblue;
+color:red;
+}
+dd:hover, dt:hover{
+    background-color: lightskyblue;
+}
+dt {
+font-weight: bold;
+margin-top: 5px;
+}
+ul {
+    list-style-type: none;
+    padding: 0px;
+    margin: 0px;
+}
+.even {
+color: #006699;
+}
+.oneven {
+color: #009999;
+}
+ul.menu {
+list-style: none;
+padding: 0;
+}
+ul.menu li {
+display: inline;
+}
