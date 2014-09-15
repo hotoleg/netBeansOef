@@ -8,6 +8,9 @@ package be.vdab.servlets;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Enumeration;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -19,19 +22,24 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "StatistiekServlet", urlPatterns = {"/statistieken"})
-public class StatistiekServlet extends HttpServlet {
+@WebServlet(name = "HeadersServlet", urlPatterns = {"/headers"})
+public class HeadersServlet extends HttpServlet {
 private static final long serialVersionUID = 1L;
-private static final String VIEW = "/WEB-INF/JSP/statistiek.jsp";
-
+private static final String VIEW = "/WEB-INF/JSP/headers.jsp";
+   
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setAttribute("statistiek", request.getServletContext().getAttribute("statistiek"));
-        RequestDispatcher dispatcher = request.getRequestDispatcher(VIEW);
+        Map<String,String> headers=new LinkedHashMap<String,String>();
+        Enumeration<String> headerNames=request.getHeaderNames();
+        while (headerNames.hasMoreElements()) { // zolang er headernamen zijn
+            String headerName=headerNames.nextElement(); // de volgende headernaam
+            String headerValue=request.getHeader(headerName);
+            headers.put(headerName, headerValue);
+        }
+        request.setAttribute("headers", headers);
+        RequestDispatcher dispatcher=request.getRequestDispatcher(VIEW);
         dispatcher.forward(request, response);
     }
-
-
-
+    
 }

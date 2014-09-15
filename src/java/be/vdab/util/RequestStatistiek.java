@@ -17,10 +17,15 @@ import javax.servlet.http.HttpServletRequest;
  */
 public class RequestStatistiek {
     private final static String STATISTIEK = "statistiek";
-    @SuppressWarnings("unchecked")
+    //@SuppressWarnings("unchecked")
     public synchronized void voegRequestToe(HttpServletRequest request) {
         ServletContext context = request.getServletContext();
         String url = request.getRequestURI();
+        int index = url.indexOf(";jsessionid=");
+        if (index != -1) {
+            // onderdeel met session id verwijderen uit URL:
+            url = url.substring(0, index);
+        }
         Map<String, Integer> statistiek =(Map<String, Integer>) context.getAttribute(STATISTIEK); 
         if (statistiek == null) {
             statistiek = new ConcurrentHashMap<String, Integer>(); 

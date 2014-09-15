@@ -60,3 +60,6 @@ margin-bottom: 1em;
 ul.zonderbolletjes {
 list-style: none;
 }
+input[type='checkbox'] {
+display: inline;
+}

@@ -15,6 +15,14 @@
 <li><a href="${pizzasTussenPrijzenURL}" class="m">Pizza’s tussen prijzen</a></li>
 <c:url value="voorkeuren" var="voorkeurpizzasURL"/>
 <li><a href="${voorkeurpizzasURL}">Voorkeurpizza's</a></li>
+<c:url value="pizzatoevoegen" var="pizzatoevoegenURL"/>
+<li><a href="${pizzatoevoegenURL}">Pizza toevoegen</a></li>
+<c:url value="/cookies" var="cookiesURL"/>
+<li><a href="${cookiesURL}">Cookies</a></li>
+<c:url value="/headers" var="headersURL"/>
+<li><a href="${headersURL}">Headers</a></li>
+<c:url value="/pizzasbestellen" var="bestelURL"/>
+<li><a href="${bestelURL}">Bestellen</a></li>
 </ul>
 </div>
 </div>

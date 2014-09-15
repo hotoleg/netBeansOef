@@ -9,6 +9,7 @@ package be.vdab.dao;
 import be.vdab.entities.Pizza;
 import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
@@ -41,4 +42,9 @@ public class PizzaDAO {
         }
         return resultaat;
     }
+    public void create(Pizza pizza) {
+        long hoogsteNummer = Collections.max(pizzas.keySet());
+        pizza.setNummer(hoogsteNummer + 1);
+        pizzas.put(pizza.getNummer(), pizza);
+    }   
 }

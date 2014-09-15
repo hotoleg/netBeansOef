@@ -18,14 +18,16 @@ public class Pizza {
     private BigDecimal prijs;
     private boolean pikant;
     
-    public Pizza(long nummer, String naam, BigDecimal prijs, boolean pikant) {
-        setNummer(nummer);
+ 
+    public Pizza(String naam, BigDecimal prijs, boolean pikant) {
         setNaam(naam);
         setPrijs(prijs);
         setPikant(pikant);
     }
-
-    
+    public Pizza(long nummer, String naam, BigDecimal prijs, boolean pikant) {
+        this(naam,prijs,pikant);
+        setNummer(nummer);
+    }
     /**
      * @return the nummer
      */

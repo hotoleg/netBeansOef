@@ -23,6 +23,10 @@
         <c:param name="nummer" value="${pizza.nummer}"/>
         </c:url>
         <a href="<c:out value='${detailURL}'/>">Detail</a>
+        <c:if test="${pizzaNummersMetFoto.contains(pizza.nummer)}">
+            <c:url value="/pizzafotos/${pizza.nummer}.jpg" var="fotoURL"/>
+            <a href="${fotoURL}">Foto</a>
+        </c:if>
         </li>
         </c:forEach>
         </ul>
