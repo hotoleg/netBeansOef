@@ -10,7 +10,7 @@
     <body>
         <c:import url="/WEB-INF/JSP/menu.jsp" />
         <h1>Pizza's tussen prijzen</h1>
-        <c:url value="tussenprijzen" var="url" />
+        <c:url value="/pizzas/tussenprijzen.htm" var="url" />
         <form method="get" action="${url}"> 
             <label>Van prijs: <span class="fout">${fouten.van}</span>
             <input name="van" value="${param.van}"></label>

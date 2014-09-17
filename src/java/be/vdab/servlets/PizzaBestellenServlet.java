@@ -25,7 +25,7 @@ import javax.servlet.http.HttpSession;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "PizzaBestellenServlet", urlPatterns = {"/pizzasbestellen"})
+@WebServlet(name = "PizzaBestellenServlet", urlPatterns = {"/pizzas/pizzasbestellen.htm"})
 public class PizzaBestellenServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;

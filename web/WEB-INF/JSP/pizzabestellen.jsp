@@ -12,7 +12,7 @@
         <h1>Pizza's bestellen</h1>
         <c:if test="${not empty allePizzas}">
             <h2>Ons assortiment</h2>
-            <c:url value="/pizzasbestellen" var="bestelURL" />
+            <c:url value="/pizzas/pizzasbestellen.htm" var="bestelURL" />
             <form method="post" action="${bestelURL}">
                 <ul class="zonderbolletjes">
                     <c:forEach var="pizza" items="${allePizzas}">

@@ -19,7 +19,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "StatistiekServlet", urlPatterns = {"/statistieken"})
+@WebServlet(name = "StatistiekServlet", urlPatterns = {"/statistieken.htm"})
 public class StatistiekServlet extends HttpServlet {
 private static final long serialVersionUID = 1L;
 private static final String VIEW = "/WEB-INF/JSP/statistiek.jsp";

@@ -25,7 +25,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author Oleg.Kolokolnikov
  */
-@WebServlet("/pizzas")
+@WebServlet("/menu/pizzas.htm")
 public class PizzaServlet extends HttpServlet {
 private static final long serialVersionUID = 1L;
 private static final String VIEW = "/WEB-INF/JSP/pizzas.jsp";

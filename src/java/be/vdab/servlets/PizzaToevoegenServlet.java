@@ -25,7 +25,7 @@ import javax.servlet.http.Part;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "PizzaToevoegenServlet", urlPatterns = {"/pizzatoevoegen"})
+@WebServlet(name = "PizzaToevoegenServlet", urlPatterns = {"/pizzas/pizzatoevoegen.htm"})
 @MultipartConfig
     public class PizzaToevoegenServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;

@@ -10,7 +10,7 @@
     <body>
         <c:import url="/WEB-INF/JSP/menu.jsp" />
         <h1>Voorkeurpizza's</h1>
-        <c:url value="voorkeuren" var="url" />
+        <c:url value="/pizzas/voorkeuren.htm" var="url" />
         <form method="get" action="${url}">
             <ul class="zonderbolletjes">
                 <c:forEach var="pizza" items="${pizzas}">

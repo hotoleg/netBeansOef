@@ -19,7 +19,7 @@
         <li class="${status.count % 2 == 0 ? 'even':'oneven'}">${pizza.nummer}:
         <c:out value="${pizza.naam}"/> ${pizza.prijs}&euro;
         ${pizza.pikant ? "pikant" : "niet pikant"}
-        <c:url value="pizzadetail" var="detailURL">
+        <c:url value="/pizzas/pizzadetail.htm" var="detailURL">
         <c:param name="nummer" value="${pizza.nummer}"/>
         </c:url>
         <a href="<c:out value='${detailURL}'/>">Detail</a>

@@ -21,7 +21,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "CookieServlet", urlPatterns = {"/cookies"})
+@WebServlet(name = "CookieServlet", urlPatterns = {"/cookies.htm"})
 public class CookieServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final String VIEW = "/WEB-INF/JSP/cookies.jsp";
@@ -51,7 +51,6 @@ public class CookieServlet extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         // de gesubmitte form verwerken
-        request.setCharacterEncoding("UTF-8");
         Cookie cookie=new Cookie("naam",
         URLEncoder.encode(request.getParameter("naam"), "UTF-8")); 
         cookie.setMaxAge(60 * 30); // 60 seconden x 30 = 30 minuten

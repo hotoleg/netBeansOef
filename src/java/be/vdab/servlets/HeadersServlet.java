@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "HeadersServlet", urlPatterns = {"/headers"})
+@WebServlet(name = "HeadersServlet", urlPatterns = {"/headers.htm"})
 public class HeadersServlet extends HttpServlet {
 private static final long serialVersionUID = 1L;
 private static final String VIEW = "/WEB-INF/JSP/headers.jsp";

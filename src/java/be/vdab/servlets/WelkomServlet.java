@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(urlPatterns="/welkom", name="welkomservlet")
+@WebServlet(urlPatterns="/welkom.htm", name="welkomservlet")
 public class WelkomServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final String VIEW = "WEB-INF/JSP/welkom.jsp";

@@ -22,7 +22,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author oleg.kolokolnikov
  */
-@WebServlet(name = "VoorkeurPizzaServlet", urlPatterns = {"/voorkeuren"})
+@WebServlet(name = "VoorkeurPizzaServlet", urlPatterns = {"/pizzas/voorkeuren.htm"})
 public class VoorkeurPizzaServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final String INPUT_VIEW =

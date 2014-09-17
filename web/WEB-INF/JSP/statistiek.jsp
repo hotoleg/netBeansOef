@@ -10,6 +10,7 @@
     <body>
         <c:import url="/WEB-INF/JSP/menu.jsp"/>
         <h1>Statistiek</h1>
+        <div>Aantal mandjes: ${empty aantalMandjes ? 0 : aantalMandjes}</div>
         <c:if test="${not empty statistiek}">
             <table>
                 <caption>Request statistiek</caption>
