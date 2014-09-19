@@ -16,13 +16,11 @@ public class Begroeting {
     private final String boodschap;
     public Begroeting() {
         Calendar calendar = Calendar.getInstance();
-        int uur = calendar.get(Calendar.HOUR_OF_DAY);
-        if (uur >= 6 && uur < 12) {
-            boodschap = "Goede morgen";
-        } else if (uur < 18) {
-            boodschap = "Goede middag";
+        int dag = calendar.get(Calendar.DAY_OF_WEEK);
+        if (dag == Calendar.MONDAY || dag == Calendar.THURSDAY) {
+            boodschap = "We zijn gesloten";
         } else {
-            boodschap = "Goede avond";
+            boodschap = "We zijn open";
         }
     }
     @Override

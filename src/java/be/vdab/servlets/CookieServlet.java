@@ -31,6 +31,10 @@ public class CookieServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String locale=request.getParameter("locale");
+        if (locale != null) {
+            request.getSession().setAttribute("locale", locale);
+        }
         // de pagina met de form presenteren aan de gebruiker
        if (request.getCookies() != null) {
             for (Cookie cookie:request.getCookies()) {
