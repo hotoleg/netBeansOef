@@ -30,7 +30,7 @@ public class PizzaBestellenServlet extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static final String VIEW = "/WEB-INF/JSP/pizzabestellen.jsp";
-    private static final String REDIRECT_URL = "/pizzasbestellen";
+    private static final String REDIRECT_URL = "/pizzas/pizzasbestellen.htm";
     private static final String MANDJE = "mandje"; 
     private final PizzaDAO pizzaDAO = new PizzaDAO();
     
@@ -80,6 +80,4 @@ public class PizzaBestellenServlet extends HttpServlet {
     }
 
 }
-
-    
 

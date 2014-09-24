@@ -30,7 +30,7 @@ import javax.servlet.http.Part;
     public class PizzaToevoegenServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private static final String VIEW = "/WEB-INF/JSP/pizzatoevoegen.jsp";
-    private static final String REDIRECT_URL = "/pizzas";
+    private static final String REDIRECT_URL = "/menu/pizzas.htm";
     private final PizzaDAO pizzaDAO = new PizzaDAO();
     
 

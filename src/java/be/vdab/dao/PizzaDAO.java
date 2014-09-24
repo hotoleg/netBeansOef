@@ -26,7 +26,7 @@ public class PizzaDAO {
     private static final String READ_SQL =
     "select nummer,naam,prijs,pikant from pizzas where nummer=?";
     private static final String FIND_BY_PRIJS_SQL =
-    "select nummer,naam,prijs,pikant from pizzas"+
+    "select nummer,naam,prijs,pikant from pizzas "+
     "where prijs between ? and ? order by prijs";
     private static final String CREATE_SQL =
     "insert into pizzas(naam,prijs,pikant) values (?,?,?)";
@@ -85,7 +85,7 @@ public class PizzaDAO {
         PreparedStatement statement = null;
         ResultSet resultSet = null;
         try {
-            List<Pizza> pizzas = new ArrayList<Pizza>();
+            List<Pizza> pizzas = new ArrayList<>();
             connection = databaseUtil.getConnection();
             statement = connection.prepareStatement(FIND_BY_PRIJS_SQL);
             statement.setBigDecimal(1, van);

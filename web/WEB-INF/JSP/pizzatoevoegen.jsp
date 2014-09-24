@@ -10,7 +10,7 @@
     <body>
         <c:import url="/WEB-INF/JSP/menu.jsp" />
         <h1>Pizza toevoegen</h1>
-        <c:url value="/pizzas/pizzatoevoegenhtm" var="url" />
+        <c:url value="/pizzas/pizzatoevoegen.htm" var="url" />
         <form method="post" action="${url}" enctype="multipart/form-data">
             <label>Naam: <span class="fout">${fouten.naam}</span>
             <input name="naam" value="${param.naam}"></label>
