@@ -19,7 +19,7 @@
 
 <div class="drop">
 <ul class="drop_menu">
-<li><a href='#'><fmt:message key="home"/></a>
+<li><a href='${contextPath}/index.htm'><fmt:message key="home"/></a>
 	<ul>
 	<li><a href='#'>Sub Link 1</a></li>
 	<li><a href='#'>Sub Link 2</a></li>
